@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.4",
+        "adevait/gmail-wrapper": "1.0.*"
+    }
+}
