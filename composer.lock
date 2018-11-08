@@ -96,16 +96,16 @@
         },
         {
             "name": "markbaker/complex",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MarkBaker/PHPComplex.git",
-                "reference": "a78d82ae4e682c3809fc3023d1b0ce654f6ab12b"
+                "reference": "1ea674a8308baf547cbcbd30c5fcd6d301b7c000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MarkBaker/PHPComplex/zipball/a78d82ae4e682c3809fc3023d1b0ce654f6ab12b",
-                "reference": "a78d82ae4e682c3809fc3023d1b0ce654f6ab12b",
+                "url": "https://api.github.com/repos/MarkBaker/PHPComplex/zipball/1ea674a8308baf547cbcbd30c5fcd6d301b7c000",
+                "reference": "1ea674a8308baf547cbcbd30c5fcd6d301b7c000",
                 "shasum": ""
             },
             "require": {
@@ -187,7 +187,7 @@
                 "complex",
                 "mathematics"
             ],
-            "time": "2018-07-31T08:38:40+00:00"
+            "time": "2018-10-13T23:28:42+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

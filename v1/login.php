@@ -5,7 +5,7 @@ require_once('includes/config.sample.php');
 use GmailWrapper\Authenticate;
 $authenticate = Authenticate::getInstance(CLIENT_ID,CLIENT_SECRET,APPLICATION_NAME,DEVELOPER_KEY);
 if(!$authenticate->isAuthenticated()) {
-    $response = $authenticate->getLogInURL('http://127.0.0.1:7070/v1/login.php', ['openid','https://www.googleapis.com/auth/gmail.readonly','https://mail.google.com/','https://www.googleapis.com/auth/gmail.modify','https://www.googleapis.com/auth/gmail.compose','https://www.googleapis.com/auth/gmail.send'],'offline', 'force');
+    $response = $authenticate->getLogInURL('http://127.0.0.1:7979/login.php', ['openid','https://www.googleapis.com/auth/gmail.readonly','https://mail.google.com/','https://www.googleapis.com/auth/gmail.modify','https://www.googleapis.com/auth/gmail.compose','https://www.googleapis.com/auth/gmail.send'],'offline', 'force');
     if(!$response['status']) {
         echo $response['message'];
         exit;

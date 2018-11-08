@@ -1,5 +1,5 @@
 <?php
-define('CLIENT_ID','1056345468482-nru0k5lqjnlk0dolt6g084ee8oi7bsub.apps.googleusercontent.com');
-define('CLIENT_SECRET','pFXaZNPm5-PPqxExTg3CDkK2');
+define('CLIENT_ID','1056345468482-33n2j5cmlq69v3n0hhb5ieq0harjfi5e.apps.googleusercontent.com');
+define('CLIENT_SECRET','keZ91uDT5gG9p9aJhQwOisaW');
 define('APPLICATION_NAME','Inquid Email Reader');
-define('DEVELOPER_KEY','AIzaSyAj-SYuWOvIRZw1u62xjZY1ucoU7lMyzAY');
+define('DEVELOPER_KEY','AIzaSyDTxX8D-Aon8sLwZWFot7-EeT9RUejWPzQ');

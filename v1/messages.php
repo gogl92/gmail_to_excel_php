@@ -37,19 +37,28 @@ foreach ($messageList['data'] as $key => $value) {
     }
 
     $body .= isset($messageDetails['data']['body']['snippet']) ? $body .= $messageDetails['data']['body']['snippet'] : '';
-    echo $body;
+
     $result[] = ['ID'=>$id, 'From'=>$from, 'To'=>$to, 'CC'=>$cc,'BCC'=>$bcc,'Subject'=>$subject,'Body'=>$body];
   }
 }
 $excelHelper->createExportTable($result, [
     ['coordinate' => 'A1', 'title' => 'ID'],
-    ['coordinate' => 'B1', 'title' => 'From'],
-    ['coordinate' => 'C1', 'title' => 'To'],
-    ['coordinate' => 'D1', 'title' => 'CC'],
-    ['coordinate' => 'E1', 'title' => 'BCC'],
-    ['coordinate' => 'F1', 'title' => 'Subject'],
-    ['coordinate' => 'G1', 'title' => 'Body'],
+    ['coordinate' => 'B1', 'title' => 'Remitente'],
+    ['coordinate' => 'C1', 'title' => 'Destinatario'],
+    ['coordinate' => 'D1', 'title' => 'Copia'],
+    ['coordinate' => 'E1', 'title' => 'Copia Oculta'],
+    ['coordinate' => 'F1', 'title' => 'Modelo'],
+    ['coordinate' => 'F1', 'title' => 'Marca'],
+    ['coordinate' => 'F1', 'title' => 'Nombre'],
+    ['coordinate' => 'F1', 'title' => 'Nombre de la Empresa'],
+    ['coordinate' => 'F1', 'title' => 'Teléfono'],
+    ['coordinate' => 'F1', 'title' => 'Tipo de Empresa'],
+    ['coordinate' => 'F1', 'title' => 'Estado'],
+    ['coordinate' => 'F1', 'title' => 'País'],
+    ['coordinate' => 'F1', 'title' => 'Correo Electrónico'],
+    ['coordinate' => 'G1', 'title' => 'Mensaje'],
 ]);
+
 $excelHelper->saveExcel('files', 'Test2');
 
 $nextToken = $messageList['nextToken'];
