@@ -1,6 +1,6 @@
 {
   "require": {
-    "phpoffice/phpspreadsheet": "^1.4",
+    "phpoffice/phpspreadsheet": "dev-master",
     "adevait/gmail-wrapper": "1.0.*",
     "inquid/yii-reports": "dev-master"
   }
