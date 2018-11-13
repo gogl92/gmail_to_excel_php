@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../vendor/autoload.php';
-require_once('includes/config.sample.php');
+require_once('includes/config.php');
 use GmailWrapper\Authenticate;
 $authenticate = Authenticate::getInstance(CLIENT_ID,CLIENT_SECRET,APPLICATION_NAME,DEVELOPER_KEY);
 if(!$authenticate->isAuthenticated()) {

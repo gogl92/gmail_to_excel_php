@@ -25,6 +25,7 @@ class ExcelHelper
     {
         $lastColumn = $this->getNameFromNumber(count($headers));
         $this->objPHPExcel = new Spreadsheet();
+        $this->objPHPExcel->getCalculationEngine()->setCalculationCacheEnabled(false);
         $this->objPHPExcel->setActiveSheetIndex(0);
         $this->objPHPExcel->getActiveSheet()->getStyle("A1:{$lastColumn}" . (count($baseArray) + 1))->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
         $this->setColumnsStyle();
@@ -33,6 +34,7 @@ class ExcelHelper
         if ($this->addFilters) {
             $this->objPHPExcel->getActiveSheet()->setAutoFilter("A1:{$lastColumn}" . (count($baseArray) + 1));
         }
+
         $this->objPHPExcel->getActiveSheet()->fromArray($baseArray, '', 'A2');
     }
 
@@ -122,6 +124,13 @@ class ExcelHelper
     {
         foreach ($array as $item){
             $this->objPHPExcel->getActiveSheet()->getColumnDimension($item)->setVisible(false);
+        }
+    }
+
+    public function autoSizeColumns(array $array)
+    {
+        foreach ($array as $item) {
+            $this->objPHPExcel->getActiveSheet()->getColumnDimension($item)->setAutoSize(true);
         }
     }
 }
